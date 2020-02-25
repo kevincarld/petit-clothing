@@ -3,8 +3,8 @@ import React from 'react';
 //Style
 import './directory.scss';
 
-// Components: Menu-item
-import MenuItem from '../menu-item/Menu-item';
+// Components: MenuItem
+import MenuItem from '../menuItem/MenuItem';
 
 class Directory extends React.Component {
   constructor() {

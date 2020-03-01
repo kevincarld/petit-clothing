@@ -9,6 +9,7 @@ import './pages/homepage/homepage.scss';
 // Components: Homepage
 import Homepage from './pages/homepage/HomePage';
 import ShopPage from './pages/shop/ShopPage';
+import SignInSignUpPage from './pages/signInSignUpPage/SignInSignUpPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route path='/shop' component={ShopPage}/>
+        <Route path='/signin' component={SignInSignUpPage}/>
       </Switch>
     </div>
   );

@@ -24,14 +24,11 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-
     // Auth listener from firebase
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-
       // If has user
       if (userAuth) { 
         const userRef = await createUserProfileDocument(userAuth);
-        
         // Checked snapshot within db using user reference
         userRef.onSnapshot((snapShot) => { 
           this.setState({
@@ -41,12 +38,10 @@ class App extends React.Component {
             }
           });
         })
-
       } else {
         this.setState({ currentUser: userAuth });
       }
     })
-    
   }
 
   componentWillUnmount() {
